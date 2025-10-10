@@ -16,21 +16,7 @@ This project is a custom multi-threaded HTTP server built from scratch in Python
     - [cite_start]**Host Header Validation**: Ensures the `Host` header matches the server's address to prevent certain types of attacks. [cite: 106]
 - **Configurable & Robust**: Server host, port, and thread pool size can be configured via command-line arguments. [cite_start]Includes comprehensive logging and error handling. [cite: 11]
 
-## Project Structure
 
-http-server-project/
-├── server.py             # Main server implementation
-├── resources/            # Directory for all servable files
-│   ├── index.html        # Default page for the root path
-│   ├── about.html
-│   ├── contact.html
-│   ├── sample.txt
-│   ├── large_sample.txt
-│   ├── logo.png
-│   ├── photo.jpg
-│   ├── large_image.png
-│   └── uploads/          # Directory for POST request uploads
-└── README.md             # This file
 
 
 ## How to Run the Server
@@ -92,4 +78,5 @@ Serving binary files correctly requires careful handling to avoid data corruptio
 - The server reads the entire file into memory before sending, which is inefficient for very large files.
 - The thread pool size is fixed at startup.
 - The server does not support HTTPS.
+
 - HTTP request parsing is basic and may not handle all edge cases.
